@@ -5,5 +5,12 @@ from django.shortcuts import render
 def index(request):
     return HttpResponse("Hello, world. You're at")
 
-def categories(request):
-    return HttpResponse("Hello, world. You're at the category page")
+def categories(request, cat_id):
+    return HttpResponse(f"Hello, world. You're at the category page {cat_id}")
+
+def categories_by_slug(request, cat_slug):
+    return HttpResponse(f"Hello, world. You're at the category page by slug {cat_slug}")
+
+def archive(request, year):
+    return HttpResponse(f"Hello, world. You're at the archive page {year}")
+
