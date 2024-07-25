@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
+    if request.method == 'GET':
+        print(request.GET)
     return HttpResponse("Hello, world. You're at")
 
 def categories(request, cat_id):
